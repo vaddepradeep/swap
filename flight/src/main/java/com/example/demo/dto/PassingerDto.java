@@ -1,15 +1,13 @@
-package com.example.demo.dao;
+package com.example.demo.dto;
 
 import java.io.Serializable;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-@Entity
-@Table(name = "pasenger")
-public class PasengerDao implements  Serializable {
-	@Id
+public class PassingerDto {
 	private  String  firstname ;
+	private String lastname;
+	private int age;
+	private String gender;
+	private boolean meal;
 	public String getFirstname() {
 		return firstname;
 	}
@@ -40,9 +38,6 @@ public class PasengerDao implements  Serializable {
 	public void setMeal(boolean meal) {
 		this.meal = meal;
 	}
-	private String lastname;
-	private int age;
-	private String gender;
-	private boolean meal;
+	
 
 }

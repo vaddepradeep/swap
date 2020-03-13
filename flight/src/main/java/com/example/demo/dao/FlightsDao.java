@@ -8,20 +8,13 @@ import javax.persistence.Table;
 @Entity
 @Table(name="flights")
 public class FlightsDao {
-	@Override
-	public String toString() {
-		return "FlightsDao [flightid=" + flightid + ", flightname=" + flightname + ", sorce=" + sorce + ", destination="
-				+ destination + ", Doj=" + Doj + ", getFlightid()=" + getFlightid() + ", getFlightname()="
-				+ getFlightname() + ", getSorce()=" + getSorce() + ", getDestination()=" + getDestination()
-				+ ", getDoj()=" + getDoj() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
-				+ ", toString()=" + super.toString() + "]";
-	}
+	
 	@Id
 	private long flightid;
 	private String flightname;
 	private String sorce;
 	private String destination;
-	private  Date Doj;
+	//private  Date Doj;
 	public long getFlightid() {
 		return flightid;
 	}
@@ -46,11 +39,11 @@ public class FlightsDao {
 	public void setDestination(String destination) {
 		this.destination = destination;
 	}
-	public Date getDoj() {
+	/*public Date getDoj() {
 		return Doj;
 	}
 	public void setDoj(Date doj) {
 		Doj = doj;
-	}
+	}*/
 
 }

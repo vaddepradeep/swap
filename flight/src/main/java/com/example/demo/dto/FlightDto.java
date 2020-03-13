@@ -7,7 +7,7 @@ public class FlightDto {
 	private String flightname;     
 	private String sorce;
 	private String destination;
-	private  Date Doj;
+	//private  Date Doj;
 	public long getFlightid() {
 		return flightid;
 	}
@@ -32,11 +32,11 @@ public class FlightDto {
 	public void setDestination(String destination) {
 		this.destination = destination;
 	}
-	public Date getDoj() {
+/*	public Date getDoj() {
 		return Doj;
 	}
 	public void setDoj(Date doj) {
 		Doj = doj;
 	}
-
+*/
 }
