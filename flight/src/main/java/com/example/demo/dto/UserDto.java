@@ -1,13 +1,13 @@
 package com.example.demo.dto;
 
 public class UserDto {
-	private  String uid;
+	private  int uid;
 	private String username;
 	private String pwd;
-	public String getUid() {
+	public int getUid() {
 		return uid;
 	}
-	public void setUid(String uid) {
+	public void setUid(int uid) {
 		this.uid = uid;
 	}
 	

@@ -13,8 +13,9 @@ import javax.persistence.Table;
 @Table(name="user")
 public class UserDao implements Serializable {
 	@Id
-	@GeneratedValue(strategy =GenerationType.IDENTITY)
+	
 	private int uid;
+	@Column
 	private String username;
 	@Column
 	private String pwd;

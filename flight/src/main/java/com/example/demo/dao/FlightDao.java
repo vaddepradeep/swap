@@ -5,16 +5,19 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 @Entity
 @Table(name="flights")
-public class FlightsDao {
+public class FlightDao {
 	
 	@Id
 	private long flightid;
 	private String flightname;
-	private String sorce;
+	private String source;
 	private String destination;
-	//private  Date Doj;
+	@Temporal(TemporalType.DATE)
+	private  Date Doj;
 	public long getFlightid() {
 		return flightid;
 	}
@@ -28,10 +31,10 @@ public class FlightsDao {
 		this.flightname = flightname;
 	}
 	public String getSorce() {
-		return sorce;
+		return source;
 	}
 	public void setSorce(String sorce) {
-		this.sorce = sorce;
+		this.source = sorce;
 	}
 	public String getDestination() {
 		return destination;
@@ -39,11 +42,11 @@ public class FlightsDao {
 	public void setDestination(String destination) {
 		this.destination = destination;
 	}
-	/*public Date getDoj() {
+	public Date getDoj() {
 		return Doj;
 	}
 	public void setDoj(Date doj) {
 		Doj = doj;
-	}*/
+	}
 
 }
