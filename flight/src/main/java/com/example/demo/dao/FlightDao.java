@@ -7,6 +7,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+
+import org.springframework.format.annotation.DateTimeFormat;
 @Entity
 @Table(name="flights")
 public class FlightDao {
@@ -17,6 +19,7 @@ public class FlightDao {
 	private String source;
 	private String destination;
 	@Temporal(TemporalType.DATE)
+	@DateTimeFormat(pattern = "dd/mm/yyyy")
 	private  Date Doj;
 	public long getFlightid() {
 		return flightid;
@@ -30,11 +33,12 @@ public class FlightDao {
 	public void setFlightname(String flightname) {
 		this.flightname = flightname;
 	}
-	public String getSorce() {
+	
+	public String getSource() {
 		return source;
 	}
-	public void setSorce(String sorce) {
-		this.source = sorce;
+	public void setSource(String source) {
+		this.source = source;
 	}
 	public String getDestination() {
 		return destination;
